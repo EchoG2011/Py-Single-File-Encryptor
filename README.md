@@ -38,7 +38,7 @@ python make_single_file.py
 ```
 * 弹出文件选择框 → 选中你要加密的 `xxx.py` → 点“打开”。  
 * 同目录立刻生成 `decryptor_single.py`，这就是最终发给用户的文件。
-
+作者最近还发现，用来加密远控小马能过360和杀毒平台（所有），这种内存注入方法适应一部分代码
 ### 2.3 批量/命令行调用（可选）
 ```bash
 python make_single_file.py src/my_script.py dist/my_script_decrypt.py
@@ -76,7 +76,11 @@ pip install pyinstaller
 pyinstaller -F -w -i app.ico decryptor_single.py
 ```
 dist 目录下生成 `decryptor_single.exe`，双击即可运行。
-
+如果有时加密代码的模块较多就需要参考这种方法：
+```bash
+pyinstaller --onefile --windowed --noconfirm --hidden-import Crypto.Cipher.AES --hidden-import hashlib --hidden-import base64 --name decryptor_mem decryptor_single.py
+```
+根据需求选择模块(Python Moudle)_
 ### 4.2  Linux / macOS 开机自启
 ```bash
 chmod +x decryptor_single.py
