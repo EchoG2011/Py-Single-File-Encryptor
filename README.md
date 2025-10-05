@@ -1,15 +1,4 @@
-```markdown
-<!-- 顶部 Banner 可选 -->
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.7+-blue.svg"/>
-  <img src="https://img.shields.io/badge/License-MIT-green.svg"/>
-  <img src="https://img.shields.io/badge/crypto-AES--256--GCM-orange.svg"/>
-</p>
 
-<h1 align="center">PySingleFileEncryptor</h1>
-<p align="center">把任意 <code>.py</code> 变成「单文件自解密脚本」——加密、分发、一键运行，全程内存解密，磁盘无明文。</p>
-
----
 
 ## 0. 30 秒速览
 | 你是开发者 | 你是最终用户 |
